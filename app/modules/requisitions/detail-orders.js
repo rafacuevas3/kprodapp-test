@@ -1,5 +1,4 @@
 const elemFromId = App.catalogs.elemFromId
-const preprocData = require('./models/preproc-data')
 const BT_PREFIX = 'related-orders'
 
 const dateFormatter = require('scripts/lib/dates').dateTimeFormat
