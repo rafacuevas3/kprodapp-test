@@ -61,7 +61,9 @@ mixin ageList(defAge)
 
       .row.cont-detail-pane
         .col-sm-7.col-xl-8#detail-left-pane
-          ul#detail-nav-tabs.nav.nav-tabs(role="tablist")
+          ul#detail-nav-tabs.with-related-orders.nav.nav-tabs(role="tablist")
+            li
+              a(data-toggle="tab" href="#detail-orders") Ordenes
             li
               a(data-toggle="tab" href="#detail-history") Historial
             li.active.-can-edit.main-tab
@@ -140,6 +142,8 @@ mixin ageList(defAge)
 
             #detail-history.tab-pane.fade
               include detail-history.pug
+            #detail-orders.tab-pane.fade
+              include detail-orders.pug
 
         .col-sm-5.col-xl-4#detail-right-pane
           .detail-pane.detail-pane-right
