@@ -394,7 +394,7 @@ function showLinkWarning(ctx) {
 function initForm(el, ctx) {
   const formAccess = require('scripts/form-access')
   const historyTab = require('./detail-history')
-  const OrdersTab = require('./detail-orders')
+  const ordersTab = require('./detail-orders')
 
   $('#detail-right-pane').find('select').easySelect()
   if (~ctx._partials.indexOf('a')) {
@@ -407,7 +407,7 @@ function initForm(el, ctx) {
 
   historyTab(ctx)
 
-  OrdersTab(ctx)
+  ordersTab(ctx)
 
   if (ctx._partialStatus) {
     $('#status-button').prop('disabled', false).removeClass('disabled -lockstate')
